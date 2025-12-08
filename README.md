@@ -1,97 +1,119 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Современные технологии разработки мобильных приложений от UDV
+# Технический паспорт мобильного приложения “Точка сбора” (MeetPoint)
+# Голубев Илья Дмитриевич - РИ-420934
 
-# Getting Started
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Описание
 
-## Step 1: Start Metro
+Платформа для проектного обучения и студенческих стажировок.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+MeetPoint - мобильное приложение, соединяющая компании и студентов через реальные проекты (и стажировки). Компании размещают на платформе проекты и стажировки, а студенты университетов могут находить подходящие возможности и подавать заявки на участие. Внутри проекта команды получают все необходимые инструменты для управления задачами и взаимодействием.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Обоснование
 
-```sh
-# Using npm
-npm start
+Главная проблема, которую решает мобильное приложение “точка сбора” - это фрагментация инструментов и коммуникаций, с которой сталкиваются студенты и компания-заказчик при работе над учебными проектами.
+В текущей ситуации процесс выглядит хаотично и непродуктивно:
 
-# OR using Yarn
-yarn start
-```
+Поиск проекта - студенты вынуждены мониторить множество разрозненных источников: сайты от ВУЗа, чаты в мессенджерах, email-рассылки, различные источники в социальных сетях.
+Подача заявки на участие в проекте / стажировке - происходит через разные, не связанные между собой сервисы: общение с заказчиком напрямую, гугл формы, телеграм-боты или электронные почты. Это создает путаницу и долгое ожидание ответа 
+Организация работы: Управление проектом находится на разных платформах, к примеру: бэклог и задачи ведутся в Гугл Таблицах, канбан-доска введётся в Trello, Jira или где-то ещё.
+Коммуникация происходит в чатах различных соц.сетей - телеграм, вк или учебные платформы.
+Документы и файлы хранятся на гугл или яндекс дисках
 
-## Step 2: Build and run your app
+Такой подход создает информационный шум, провоцирует к потере данных, усложняет координацию и контроль для всех участников.
+Суть мобильного приложения “Точка сбора” - стать единым и единственным окном для всего жизненного цикла учебного проекта. Оно радикально упрощает процесс, от поиска проекта до сдачи результата - всё в одном месте. Также предлагает структурированность и порядок: для каждого проекта есть четкое рабочее пространство со своими инструментами (канбан, чат, участники), что делает работу более собранной и предсказуемой.
+Ценность приложения заключается в том, что оно упаковывает весь сложный процесс в один удобный и понятный интерфейс мобильного телефона, экономя время и нервы как студентов, так и организаторов проектов. 
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## Функциональные возможности
 
-### Android
+Роли приложения:
 
-```sh
-# Using npm
-npm run android
+Студент - основной пользователь, который ищет проекты и работает над ними.
+Руководитель/администратор компании - создает пространство для компании в системе, создает проекты, управляет заявками и командами.
+Куратор от компании - управляет привязанными к нему проектами: заявки, команда, задачи.
+Модератор/администратор платформы - общая модерация и администрирование
 
-# OR using Yarn
-yarn android
-```
+## Функции приложения:
 
-### iOS
+## Общие функции
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Регистрация и авторизация
+Восстановление пароля
+Редактирование профиля
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Для студентов:
+Просмотр проектов
+Подача заявки на проект
+Просмотр статуса своих заявок
+Работа в проектной команде (доступ к пространству проекта и комнанды)
+Просмотр и выполнение задач
+Общение в чате проекта (?)
+Портфолио нынешних и завершенных проектов
 
-```sh
-bundle install
-```
+Для руководителей компании (организаторов):
 
-Then, and every time you update your native dependencies, run:
+Регистрация компании в системе
+Создание и редактирование проектов
+Назначение кураторов на проекты
+Создание тестовых заданий проекта
+Управление доступом сотрудников
 
-```sh
-bundle exec pod install
-```
+Для кураторов от компании:
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Просмотр и управление заявками на проект
+Формирование проектной команды
+Управление командой (пространством проекта и команды)
+Приемка выполненных задач
 
-```sh
-# Using npm
-npm run ios
+Для модератора платформы:
 
-# OR using Yarn
-yarn ios
-```
+Модерация проектов и компаний
+Блокировка неактивных/нарушающих правила проектов/пользователей
+Управление категориями и тегами
+Поддержка пользователей
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Ключевые особенности MeetPoint:
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+1. Специализация на учебно-проектной деятельности.
 
-## Step 3: Modify your app
+Заточка именно под рабочее пространство студенческих проектов и стажировок. Учет академических сроков, учебных требований и менторской поддержки
 
-Now that you have successfully run the app, let's make changes!
+2. Низкий порог входа для компаний и студентов.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Простое внедрение. Минимальные ресурсы для сопровождения и поддержки. В отличие от Битрикс 24 не требует сложной настройки и обучения.
+3. Цикл “от заявки до результата”.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Объединение в одном месте: поиск проекта -> подача заявка -> формирование команды -> работа над проектом -> результаты
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+4. Мост между образованием и карьерой.
 
-## Congratulations! :tada:
+Ориентация на реальные проекты от компаний, а не только учебные задания. При этом фокус на учебной проектной работе, а не исключительно на трудоустройстве.
 
-You've successfully run and modified your React Native App. :partying_face:
+## Основные сценарии использования
 
-### Now what?
+Студент находит и подается на проект
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+Студент заходит в раздел “проекты”, использует фильтр: направление (Web, ML, научно-исследовательская и др.), уровень сложности, сроки. Просматривает карточки проектов с краткой информацией. Открывает полное описание проекта, смотрит критерии приемки, цель проекта и ожидаемый результат. Изучает компанию-заказчика.
+Если его всё устраивает, нажимает “подать заявку”, при необходимости выполняет тестовые задания, оставляет свои контакты и сообщение. Ожидает ответа от компании.
 
-# Troubleshooting
+Компания создает и запускает проект
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Руководитель компании заходит, нажимает “создать новый проект”. Заполняет основную информацию: название, описание, цели, критерии приемки. Указывает требуемые навыки и уровень участников. 
+Определяет сроки выполнения, указывает максимальное количество участников, назначает куратора проекта, загружает дополнительные материалы.
 
-# Learn More
+Работа над проектом в команде
 
-To learn more about React Native, take a look at the following resources:
+Участники проекта автоматически получают доступ к проекту. Знакомятся с материалами, изучают состав команды и контакты куратора.
+Тимлид команды создает задачи, назначает исполнителей и сроки. Настраивает задачи в канбан-доске
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Куратор формирует команду проекта
+
+Куратор просматривает заявки, видит список всех подавших заявки студентов. Отбирает кандидатов, просматривает профили, изучает материалы заявки. Принимает решение. Одобряет выбранные заявки и отклоняет неподходящие с комментарием.
+
+## Интеллект карта:
+
+	URL: https://mm.tt/map/3823116929?t=47tzmP6uLv
+
+## Кликабельный прототип:
+
+URL: https://marvelapp.com/prototype/8240jg7/screen/97853527
